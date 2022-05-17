@@ -30,7 +30,7 @@ class Toasts {
     msg = 'معلومات غير صحيحة';
   }
 
-  void show(BuildContext context, {Duration duration = const Duration(milliseconds: 250)}) =>
+  void show(BuildContext context, {Duration duration = const Duration(seconds: 2)}) =>
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           duration: duration,
