@@ -37,15 +37,17 @@ class NeedUpdateDialog extends StatelessWidget {
             onPressed: () async {
               final packageInfo = await PackageInfo.fromPlatform();
               final String packageName = packageInfo.packageName;
+launch(
+                      "https://play.google.com/store/apps/details?id=$packageName");
+       return;
+              //final appleAppID = await const MethodChannel('turbo_core_kit')
+                //  .invokeMethod<String>('getAppleAppID');
 
-              final appleAppID = await const MethodChannel('turbo_core_kit')
-                  .invokeMethod<String>('getAppleAppID');
-
-              Platform.isAndroid
-                  ? launch(
-                      "https://play.google.com/store/apps/details?id=$packageName")
-                  : launch(
-                      "https://apps.apple.com/eg/app/turbo-eg/id$appleAppID");
+              //Platform.isAndroid
+               //   ? launch(
+                 //     "https://play.google.com/store/apps/details?id=$packageName")
+                  //: launch(
+                    //  "https://apps.apple.com/eg/app/turbo-eg/id$appleAppID");
             },
           )
         ],
