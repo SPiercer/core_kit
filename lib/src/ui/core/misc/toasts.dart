@@ -55,7 +55,7 @@ class Toasts {
               crossAxisAlignment:
                   _description == null ? CrossAxisAlignment.center : CrossAxisAlignment.start,
               children: [
-                CherryToatIcon(
+                CherryToastIcon(
                   color: color,
                   icon: icon,
                   iconSize: 20,
